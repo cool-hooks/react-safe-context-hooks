@@ -1,7 +1,7 @@
 {
   "name": "react-safe-context",
   "version": "0.0.0",
-  "description": "",
+  "description": "Make sure context exists",
   "author": "Jakub Biesiada",
   "license": "MIT",
   "main": "lib/react-safe-context.cjs.js",
@@ -25,7 +25,12 @@
   },
   "keywords": [
     "react",
-    "hooks"
+    "hooks",
+    "context",
+    "api",
+    "error",
+    "exists",
+    "confidence"
   ],
   "bugs": {
     "url": "https://github.com/cool-hooks/react-safe-context/issues"

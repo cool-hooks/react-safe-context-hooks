@@ -9,7 +9,7 @@
 
 ## About
 
-Short description about library
+Make sure context exists
 
 ### Demo
 

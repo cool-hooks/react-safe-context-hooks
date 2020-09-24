@@ -1,1 +1,1 @@
-export { useMyHook } from './useMyHook';
+export { useSafeContext } from './useSafeContext';

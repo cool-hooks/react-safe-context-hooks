@@ -1,1 +1,1 @@
-# react-safe-context Changelog
+# react-safe-context-hooks Changelog

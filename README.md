@@ -11,15 +11,9 @@
 
 Make sure context exists
 
-### Demo
-
-**[Live – check website](#)**
-**[Playground – play with library in Storybook](#)**
-
 ### Similar Projects / Alternatives / Idea
 
-- [example](#) by [John Doe](#)
-- [example-2](#) by [Jane Doe](#)
+- [react-safe-context](https://github.com/dslane/react-safe-context) by [dslane](https://github.com/dslane)
 
 ## How to Install
 
@@ -43,13 +37,10 @@ $ yarn add react-safe-context-hooks
 import { useSafeContext } from 'react-safe-context-hooks';
 ```
 
-#### Returned Values
-
 #### Example
 
 ```js
 // before
-
 const App = () => {
   const context = useContext(ExampleContext);
 
@@ -57,7 +48,6 @@ const App = () => {
 };
 
 // after
-
 const App = () => {
   const context = useSafeContext(ExampleContext);
 

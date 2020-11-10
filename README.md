@@ -11,7 +11,7 @@
 
 Make sure context exists
 
-### Similar Projects / Alternatives / Idea
+### Similar Projects
 
 - [react-safe-context](https://github.com/dslane/react-safe-context) by [dslane](https://github.com/dslane)
 
@@ -39,7 +39,7 @@ import { useSafeContext } from 'react-safe-context-hooks';
 
 **If you want to display context name in error message you need to add `displayName` to `Context`.**
 
-#### Example
+### Example
 
 ```js
 // before

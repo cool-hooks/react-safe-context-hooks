@@ -1,7 +1,7 @@
 # [react-safe-context-hooks](https://github.com/cool-hooks/react-safe-context-hooks)
 
-[![NPM version](http://img.shields.io/npm/v/react-safe-context-hooks?style=flat-square)](https://www.npmjs.com/package/react-safe-context-hooks)
-[![NPM downloads](http://img.shields.io/npm/dm/react-safe-context-hooks?style=flat-square)](https://www.npmjs.com/package/react-safe-context-hooks)
+[![NPM version](https://img.shields.io/npm/v/react-safe-context-hooks?style=flat-square)](https://www.npmjs.com/package/react-safe-context-hooks)
+[![NPM downloads](https://img.shields.io/npm/dm/react-safe-context-hooks?style=flat-square)](https://www.npmjs.com/package/react-safe-context-hooks)
 [![NPM license](https://img.shields.io/npm/l/react-safe-context-hooks?style=flat-square)](https://www.npmjs.com/package/react-safe-context-hooks)
 [![Codecov](https://img.shields.io/codecov/c/github/cool-hooks/react-safe-context-hooks?style=flat-square)](https://codecov.io/gh/cool-hooks/react-safe-context-hooks)
 [![Travis](https://img.shields.io/travis/cool-hooks/react-safe-context-hooks/master?style=flat-square)](https://travis-ci.org/cool-hooks/react-safe-context-hooks)
@@ -37,6 +37,8 @@ $ yarn add react-safe-context-hooks
 import { useSafeContext } from 'react-safe-context-hooks';
 ```
 
+**If you want to display context name in error message you need to add `displayName` to `Context`.**
+
 #### Example
 
 ```js
@@ -44,14 +46,16 @@ import { useSafeContext } from 'react-safe-context-hooks';
 const App = () => {
   const context = useContext(ExampleContext);
 
-  return ();
+  return <pre>{JSON.stringify(context)}</pre>;
 };
 
 // after
+ExampleContext.displayName = 'ExampleContext';
+
 const App = () => {
   const context = useSafeContext(ExampleContext);
 
-  return ();
+  return <pre>{JSON.stringify(context)}</pre>;
 };
 ```
 

@@ -4,8 +4,10 @@ export const useSafeContext = <T>(unsafeContext: Context<T>) => {
   const context = useContext<T>(unsafeContext);
 
   if (!context) {
-    const errorMessage = `Missing context: ${
-      unsafeContext.displayName || JSON.stringify(unsafeContext)
+    const displayName = unsafeContext.displayName;
+
+    const errorMessage = `Missing context${
+      displayName ? `: ${displayName}` : ''
     }`;
 
     throw new Error(errorMessage);

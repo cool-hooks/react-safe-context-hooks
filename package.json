@@ -1,6 +1,6 @@
 {
   "name": "react-safe-context-hooks",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0",
   "description": "Make sure context exists",
   "author": "Jakub Biesiada",
   "license": "MIT",

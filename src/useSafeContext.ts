@@ -13,5 +13,5 @@ export const useSafeContext = <T>(unsafeContext: Context<T>) => {
     throw new Error(errorMessage);
   }
 
-  return context;
+  return context as NonNullable<T>;
 };

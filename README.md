@@ -13,7 +13,7 @@ Make sure context exists
 
 ### Demo
 
-**[CodeSandbox Playground](https://codesandbox.io/s/react-safe-context-hooks-6me74)**
+**[Playground – play with library in CodeSandbox](https://codesandbox.io/s/react-safe-context-hooks-6me74)**
 
 ### Similar Projects
 

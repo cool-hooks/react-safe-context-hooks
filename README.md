@@ -34,7 +34,7 @@ $ yarn add react-safe-context-hooks
 **• Import hook in React application file:**
 
 ```js
-import { useSafeContext } from 'react-safe-context-hooks';
+import useSafeContext from 'react-safe-context-hooks';
 ```
 
 **If you want to display context name in error message you need to add `displayName` to `Context`.**

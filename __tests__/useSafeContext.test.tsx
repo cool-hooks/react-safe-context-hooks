@@ -2,7 +2,7 @@ import React, { createContext } from 'react';
 import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useSafeContext } from '../src';
+import useSafeContext from '../src';
 
 const TestContext = createContext<{
   name: string;

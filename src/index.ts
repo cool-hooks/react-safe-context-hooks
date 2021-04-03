@@ -1,1 +1,1 @@
-export { useSafeContext } from './useSafeContext';
+export { useSafeContext as default } from './useSafeContext';

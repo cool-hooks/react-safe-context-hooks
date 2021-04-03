@@ -11,6 +11,10 @@
 
 Make sure context exists
 
+### Demo
+
+**[Playground – play with library in CodeSandbox](https://codesandbox.io/s/react-safe-context-hooks-6me74)**
+
 ### Similar Projects
 
 - [react-safe-context](https://github.com/dslane/react-safe-context) by [dslane](https://github.com/dslane)

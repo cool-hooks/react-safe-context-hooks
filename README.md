@@ -11,13 +11,13 @@
 
 Make sure context exists
 
+### Demo
+
+<!-- TODO -->
+
 ### Similar Projects
 
 - [react-safe-context](https://github.com/dslane/react-safe-context) by [dslane](https://github.com/dslane)
-
-## Demo
-
-<!-- TODO -->
 
 ## How to Install
 

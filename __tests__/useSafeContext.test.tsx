@@ -35,7 +35,7 @@ describe('useSafeContext', () => {
   it('should throw an error when context provider is not set', () => {
     const { result } = renderHook(() => useSafeContext(TestContext));
 
-    expect(result.error?.message).toBe('Missing context');
+    expect(result.error.message).toBe('Missing context');
   });
 
   it('should throw an error when context provider is not set', () => {
@@ -43,6 +43,6 @@ describe('useSafeContext', () => {
 
     const { result } = renderHook(() => useSafeContext(TestContext));
 
-    expect(result.error?.message).toBe('Missing context: TestContext');
+    expect(result.error.message).toBe('Missing context: TestContext');
   });
 });

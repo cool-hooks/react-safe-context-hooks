@@ -1,6 +1,14 @@
 import { useContext, Context } from 'react';
 
-export const useSafeContext = <T>(unsafeContext: Context<T>) => {
+interface Callbacks {
+  onSafe?: () => void;
+  onNotSafe?: (errorMessage: string) => void;
+}
+
+export const useSafeContext = <T>(
+  unsafeContext: Context<T>,
+  { onSafe, onNotSafe } = {} as Callbacks
+) => {
   const context = useContext<T>(unsafeContext);
 
   if (!context) {
@@ -10,8 +18,12 @@ export const useSafeContext = <T>(unsafeContext: Context<T>) => {
       displayName ? `: ${displayName}` : ''
     }`;
 
+    onNotSafe?.(errorMessage);
+
     throw new Error(errorMessage);
   }
+
+  onSafe?.();
 
   return context as NonNullable<T>;
 };

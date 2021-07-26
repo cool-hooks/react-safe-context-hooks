@@ -27,9 +27,9 @@
   },
   "keywords": [
     "react",
+    "api",
     "hooks",
     "context",
-    "api",
     "error",
     "exists",
     "confidence"

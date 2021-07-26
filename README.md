@@ -4,7 +4,7 @@
 [![NPM downloads](https://img.shields.io/npm/dm/react-safe-context-hooks?style=flat-square)](https://www.npmjs.com/package/react-safe-context-hooks)
 [![NPM license](https://img.shields.io/npm/l/react-safe-context-hooks?style=flat-square)](https://www.npmjs.com/package/react-safe-context-hooks)
 [![Codecov](https://img.shields.io/codecov/c/github/cool-hooks/react-safe-context-hooks?style=flat-square)](https://codecov.io/gh/cool-hooks/react-safe-context-hooks)
-[![Travis](https://img.shields.io/travis/cool-hooks/react-safe-context-hooks/master?style=flat-square)](https://travis-ci.org/cool-hooks/react-safe-context-hooks)
+[![Travis](https://img.shields.io/travis/com/cool-hooks/react-safe-context-hooks/main?style=flat-square)](https://travis-ci.com/cool-hooks/react-safe-context-hooks)
 [![Bundle size](https://img.shields.io/bundlephobia/min/react-safe-context-hooks?style=flat-square)](https://bundlephobia.com/result?p=react-safe-context-hooks)
 
 ## About

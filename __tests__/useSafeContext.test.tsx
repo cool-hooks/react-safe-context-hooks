@@ -29,7 +29,7 @@ describe('useSafeContext', () => {
 
     const { getByText } = render(<Component />, { wrapper });
 
-    expect(getByText('Tom, 22')).toBeDefined();
+    expect(getByText('Tom, 22')).toBeDefined(); // TODO
   });
 
   it('should throw an error when context provider is not set', () => {

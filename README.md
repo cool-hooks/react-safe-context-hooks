@@ -13,7 +13,7 @@ Make sure the context exists
 
 ### Demo
 
-**[Playground – play with library in CodeSandbox](https://codesandbox.io/s/react-safe-context-hooks-6me74)**
+**[Playground – play with the library in CodeSandbox](https://codesandbox.io/s/react-safe-context-hooks-6me74)**
 
 ### Similar Projects
 
@@ -41,7 +41,7 @@ $ yarn add react-safe-context-hooks
 import { useSafeContext } from 'react-safe-context-hooks';
 ```
 
-**If you want to display the context name in the error message, you need to add `displayName` to `Context`.**
+**If you want to display the context name in the error message, you need to add `displayName` to the `Context`.**
 
 ### Example
 

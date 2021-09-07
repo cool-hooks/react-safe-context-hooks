@@ -1,5 +1,4 @@
 import React, { createContext } from 'react';
-import { render } from '@testing-library/react';
 import { renderHook } from '@testing-library/react-hooks';
 
 import { useSafeContext } from '../src';
@@ -9,36 +8,31 @@ const TestContext = createContext<{
   age: number;
 } | null>(null);
 
-const Component = () => {
-  const context = useSafeContext(TestContext);
-
-  return (
-    <p>
-      {context.name}, {context.age}
-    </p>
-  );
-};
-
 describe('useSafeContext', () => {
   it('should get context values', () => {
+    const contextValue = { name: 'Tom', age: 22 };
+
     const wrapper: React.FC = ({ children }) => (
-      <TestContext.Provider value={{ name: 'Tom', age: 22 }}>
+      <TestContext.Provider value={contextValue}>
         {children}
       </TestContext.Provider>
     );
 
-    const { getByText } = render(<Component />, { wrapper });
+    const { result } = renderHook(() => useSafeContext(TestContext), {
+      wrapper,
+    });
 
-    expect(getByText('Tom, 22')).toBeDefined(); // TODO
+    expect(result.current.name).toBe(contextValue.name);
+    expect(result.current.age).toBe(contextValue.age);
   });
 
-  it('should throw an error when context provider is not set', () => {
+  it('should throw an error when the context provider is not set and the context has not displayName', () => {
     const { result } = renderHook(() => useSafeContext(TestContext));
 
     expect(result.error?.message).toBe('Missing context');
   });
 
-  it('should throw an error when context provider is not set', () => {
+  it('should throw an error when the context provider is not set and the context has displayName', () => {
     TestContext.displayName = 'TestContext';
 
     const { result } = renderHook(() => useSafeContext(TestContext));

@@ -1,14 +1,33 @@
 import { useContext, Context } from 'react';
 
-export const useSafeContext = <T>(unsafeContext: Context<T>, message?: string | (displayName: string) => string) => {
+type Message = string | ((displayName?: string) => string);
+
+export const useSafeContext = <T>(
+  unsafeContext: Context<T>,
+  message?: Message
+) => {
   const context = useContext<T>(unsafeContext);
 
   if (!context) {
     const displayName = unsafeContext.displayName;
 
-    const errorMessage = typeof message === 'function' ? message(displayName) : typeof message === 'string' ? message : `Missing context${
-      displayName ? `: ${displayName}` : ''
-    }`;
+    let errorMessage: string;
+
+    switch (typeof message) {
+      case 'string':
+        errorMessage = message;
+        break;
+
+      case 'function':
+        errorMessage = message(displayName);
+        break;
+
+      default: {
+        const contextName = displayName || 'a context';
+        errorMessage = `You are trying to use ${contextName} outside of the provider`;
+        break;
+      }
+    }
 
     throw new Error(errorMessage);
   }

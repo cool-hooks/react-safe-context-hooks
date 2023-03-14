@@ -6,9 +6,9 @@ export const useSafeContext = <T>(unsafeContext: Context<T>) => {
   if (!context) {
     const displayName = unsafeContext.displayName;
 
-    const errorMessage = `Missing context${
-      displayName ? `: ${displayName}` : ''
-    }`;
+    const errorMessage = `You're trying to use ${
+      displayName || 'the'
+    } context outside of the provider`;
 
     throw new Error(errorMessage);
   }

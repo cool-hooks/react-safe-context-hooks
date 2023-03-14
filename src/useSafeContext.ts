@@ -1,10 +1,10 @@
 import { useContext, Context } from 'react';
 
-type Message = string | ((displayName?: string) => string);
+type CustomMessage = string | ((displayName?: string) => string);
 
 export const useSafeContext = <T>(
   unsafeContext: Context<T>,
-  message?: Message
+  customMessage?: CustomMessage
 ) => {
   const context = useContext<T>(unsafeContext);
 
@@ -13,13 +13,13 @@ export const useSafeContext = <T>(
 
     let errorMessage: string;
 
-    switch (typeof message) {
+    switch (typeof customMessage) {
       case 'string':
-        errorMessage = message;
+        errorMessage = customMessage;
         break;
 
       case 'function':
-        errorMessage = message(displayName);
+        errorMessage = customMessage(displayName);
         break;
 
       default: {

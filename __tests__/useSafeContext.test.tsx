@@ -29,7 +29,7 @@ describe('useSafeContext', () => {
   it('should throw an error when the context provider is not set and the context has not displayName', () => {
     const { result } = renderHook(() => useSafeContext(TestContext));
 
-    expect(result.error?.message).toBe('Missing context');
+    expect(result.error?.message).toMatchInlineSnapshot(`"Missing context"`);
   });
 
   it('should throw an error when the context provider is not set and the context has displayName', () => {
@@ -37,6 +37,8 @@ describe('useSafeContext', () => {
 
     const { result } = renderHook(() => useSafeContext(TestContext));
 
-    expect(result.error?.message).toBe('Missing context: TestContext');
+    expect(result.error?.message).toMatchInlineSnapshot(
+      `"Missing context: TestContext"`
+    );
   });
 });

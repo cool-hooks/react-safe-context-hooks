@@ -30,7 +30,7 @@ describe('useSafeContext', () => {
     const { result } = renderHook(() => useSafeContext(TestContext));
 
     expect(result.error?.message).toBe(
-      `You're trying to use the context outside of the provider`
+      'You are trying to use the context outside of the provider'
     );
   });
 
@@ -40,7 +40,7 @@ describe('useSafeContext', () => {
     const { result } = renderHook(() => useSafeContext(TestContext));
 
     expect(result.error?.message).toBe(
-      `You're trying to use TestContext outside of the provider`
+      'You are trying to use TestContext outside of the provider'
     );
   });
 });

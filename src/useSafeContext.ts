@@ -7,8 +7,8 @@ export const useSafeContext = <T>(unsafeContext: Context<T>) => {
     const displayName = unsafeContext.displayName;
 
     const errorMessage = `You're trying to use ${
-      displayName || 'the'
-    } context outside of the provider`;
+      displayName || 'the context'
+    } outside of the provider`;
 
     throw new Error(errorMessage);
   }
